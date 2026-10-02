@@ -37,7 +37,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-d27283d7d384ff39bb2f7ec561b43778.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-9e172c6e6e5a4fe4e65edc3b4ad55cdf.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -163,7 +163,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="wrap">
   <header class="measure phead">
     <p class="kicker">Open access</p>
-    <h1 style="font-size:clamp(2.2rem,5vw,3.2rem);letter-spacing:-.02em;margin:0 0 .8rem">Publications</h1>
+    <h1 class="ptitle">Publications</h1>
     <p class="dek">Click <b style="color:var(--accent)">PDF</b> to read or save a paper. If a paper you need has no PDF here, email me and I will send you a copy. Talks, posters and apps are listed <a href="#talks">further down</a>.</p>
   </header>
   <div class="pubtools">
@@ -585,6 +585,13 @@ ul.task-list li input[type="checkbox"] {
   // a new search starts across all categories; chips can narrow it afterwards
   let prev = q.value;
   q.addEventListener('input', () => { if (!prev.trim() && q.value.trim()) setType('all'); prev = q.value; apply(); });
+  // the search bar sticks just below the menu bar (which slides away when scrolling down)
+  const tools = document.querySelector('.pubtools'), hdr = document.getElementById('quarto-header');
+  const pin = () => { if (hdr) tools.style.top = Math.max(0, Math.round(hdr.getBoundingClientRect().bottom)) + 'px'; };
+  addEventListener('scroll', () => requestAnimationFrame(pin), { passive: true });
+  addEventListener('resize', pin); if (hdr) hdr.addEventListener('transitionend', pin); pin();
+  // phones: bring the search field to the top when it is tapped, so results show above the keyboard
+  q.addEventListener('focus', () => { if (matchMedia('(max-width: 640px)').matches) setTimeout(() => q.scrollIntoView({ block: 'start', behavior: 'smooth' }), 250); });
   apply();
 })();
 </script>
