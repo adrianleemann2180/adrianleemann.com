@@ -37,7 +37,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-e307c2f66a3979e63c9155469c823a46.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-f401e65ec2442e33b8173bc458f08334.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -595,7 +595,9 @@ ul.task-list li input[type="checkbox"] {
   q.addEventListener('keydown', e => {
     if (e.key !== 'Enter') return;
     e.preventDefault(); q.blur();
-    setTimeout(() => scrollTo({ top: q.getBoundingClientRect().top + scrollY - 12, behavior: 'smooth' }), 350);
+    let start = document.querySelector('.phead').getBoundingClientRect().bottom + scrollY;   // where the search bar sits before it gets pinned
+    if (hdr && start < scrollY) start -= hdr.offsetHeight;   // scrolling up brings the menu bar back: leave room for it
+    setTimeout(() => scrollTo({ top: Math.max(0, start), behavior: 'smooth' }), 350);
   });
   apply();
 })();
