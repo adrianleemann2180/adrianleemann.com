@@ -1,51 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.adrianleemann.com/privacy/index.html</loc>
-    <lastmod>2026-10-02T06:16:07.117Z</lastmod>
+    <loc>https://www.adrianleemann.com/contact/index.html</loc>
+    <lastmod>2026-10-02T06:16:04.136Z</lastmod>
   </url>
   <url>
-    <loc>https://www.adrianleemann.com/column/index.html</loc>
-    <lastmod>2026-10-02T06:49:05.971Z</lastmod>
+    <loc>https://www.adrianleemann.com/press/index.html</loc>
+    <lastmod>2026-10-02T06:53:57.533Z</lastmod>
   </url>
   <url>
-    <loc>https://www.adrianleemann.com/professional-services/index.html</loc>
-    <lastmod>2026-10-01T22:58:34.825Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.adrianleemann.com/grants/index.html</loc>
-    <lastmod>2026-10-02T01:25:32.772Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.adrianleemann.com/publications/index.html</loc>
-    <lastmod>2026-10-02T06:23:51.276Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.adrianleemann.com/short-bio/index.html</loc>
-    <lastmod>2026-10-02T00:58:12.920Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.adrianleemann.com/index.html</loc>
-    <lastmod>2026-10-02T06:49:05.971Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.adrianleemann.com/projects/index.html</loc>
-    <lastmod>2026-10-02T00:44:01.109Z</lastmod>
+    <loc>https://www.adrianleemann.com/supervision-advisor/index.html</loc>
+    <lastmod>2026-10-02T06:53:57.549Z</lastmod>
   </url>
   <url>
     <loc>https://www.adrianleemann.com/teaching/index.html</loc>
     <lastmod>2026-10-01T22:50:38.274Z</lastmod>
   </url>
   <url>
-    <loc>https://www.adrianleemann.com/supervision-advisor/index.html</loc>
-    <lastmod>2026-10-02T01:20:50.191Z</lastmod>
+    <loc>https://www.adrianleemann.com/projects/index.html</loc>
+    <lastmod>2026-10-02T00:44:01.109Z</lastmod>
   </url>
   <url>
-    <loc>https://www.adrianleemann.com/press/index.html</loc>
+    <loc>https://www.adrianleemann.com/index.html</loc>
+    <lastmod>2026-10-02T06:53:57.516Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.adrianleemann.com/short-bio/index.html</loc>
+    <lastmod>2026-10-02T00:58:12.920Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.adrianleemann.com/publications/index.html</loc>
+    <lastmod>2026-10-02T06:23:51.276Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.adrianleemann.com/grants/index.html</loc>
+    <lastmod>2026-10-02T01:25:32.772Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.adrianleemann.com/professional-services/index.html</loc>
+    <lastmod>2026-10-01T22:58:34.825Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.adrianleemann.com/column/index.html</loc>
     <lastmod>2026-10-02T06:49:05.971Z</lastmod>
   </url>
   <url>
-    <loc>https://www.adrianleemann.com/contact/index.html</loc>
-    <lastmod>2026-10-02T06:16:04.136Z</lastmod>
+    <loc>https://www.adrianleemann.com/privacy/index.html</loc>
+    <lastmod>2026-10-02T06:16:07.117Z</lastmod>
   </url>
 </urlset>
