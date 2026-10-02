@@ -1,0 +1,3 @@
+unibe-logo.png  University of Bern logo, official file from https://www.unibe.ch/assets/media/image/logo_unibern@2x.png (used unaltered; use approved by Adrian Leemann).
+snsf-logo-en.svg  SNSF logo, English, black and white, web version, official download from https://www.snf.ch/en/d3iYI2UUG6uDFSaE/page/aboutus/contact/logo-snf (SNF_logo_standard_web_sw_heller_Hintergrund.zip; used unaltered).
+ukri-ahrc-logo.png  UKRI AHRC standard logo, official file from https://www.ukri.org/wp-content/themes/ukri/assets/img/ukri-ahrc-standard-logo.png (used unaltered; use approved by Adrian Leemann as co-investigator of the AHRC-funded CURLEW project).
