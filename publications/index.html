@@ -557,12 +557,25 @@ ul.task-list li input[type="checkbox"] {
       const c = g.querySelector('h2 .n'); if (c) c.textContent = m;
     });
     count.textContent = n + (n === 1 ? ' entry' : ' entries') + ' shown';
+    // nothing found under the current filter, but elsewhere: offer to search everything
+    if (n === 0 && words.length && (type !== 'all' || onlyOA)) {
+      const all = [...document.querySelectorAll('.pub')].filter(p => words.every(w => p.dataset.text.includes(w))).length;
+      if (all) {
+        const b = document.createElement('a'); b.href = '#'; b.textContent = 'Show ' + all + (all === 1 ? ' match' : ' matches') + ' in all categories';
+        b.addEventListener('click', e => { e.preventDefault(); reset(); });
+        count.append(' with this filter. ', b);
+      }
+    }
   }
+  function setType(t) { type = t; chips.forEach(x => x.setAttribute('aria-pressed', x.dataset.t === t)); }
+  function reset() { setType('all'); oa.setAttribute('aria-pressed', 'false'); apply(); }
   chips.forEach(c => c.addEventListener('click', () => {
-    type = c.dataset.t; chips.forEach(x => x.setAttribute('aria-pressed', x === c)); apply();
+    setType(c.dataset.t); apply();
   }));
   oa.addEventListener('click', () => { oa.setAttribute('aria-pressed', oa.getAttribute('aria-pressed') !== 'true'); apply(); });
-  q.addEventListener('input', apply);
+  // a new search starts across all categories; chips can narrow it afterwards
+  let prev = q.value;
+  q.addEventListener('input', () => { if (!prev.trim() && q.value.trim()) setType('all'); prev = q.value; apply(); });
   apply();
 })();
 </script>
